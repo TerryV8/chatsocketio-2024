@@ -1,0 +1,42 @@
+# Node dependencies
+/node_modules/
+
+# TypeScript compiler output
+/dist/
+/build/
+
+# Development environment
+.env
+.env.*
+.env.local
+.env.*.local
+
+
+# OS-specific
+*.log
+*.pid
+*.log.pid
+.DS_Store
+*.swp
+*.swo
+*.tmp
+Thumbs.db
+UserInterfaceState.xcuserstate
+
+# Editor-specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# TypeScript type declaration files (if not meant to be shared)
+*.d.ts
+
+# Yarn Plug'n'Play (if using Yarn 2 with PnP)
+.pnp/
+.pnp.js
+
+# Other tools
+*.tscache
+*.eslintcache
+*.prettiercache
