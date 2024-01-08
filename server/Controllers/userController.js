@@ -87,4 +87,29 @@ const loginUser = async (req, res) => {
   } catch (error) {}
 };
 
-module.exports = { registerUser, loginUser };
+const findUser = async (req, res) => {
+  const userId = req.params.userId;
+  try {
+    const user = await userModel.findById(userId);
+
+    res.status(200).json(user);
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: `Error during user find: ${error.message}` });
+  }
+};
+
+const getUsers = async (req, res) => {
+  try {
+    const users = await userModel.find();
+
+    res.status(200).json(users);
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: `Error during user find: ${error.message}` });
+  }
+};
+
+module.exports = { registerUser, loginUser, findUser, getUsers };
