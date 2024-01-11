@@ -19,6 +19,9 @@ app.get("/", (req, res) => {
 const userRoute = require("./Routes/userRoute");
 app.use("/api/users", userRoute);
 
+const chatRoute = require("./Routes/chatRoute");
+app.use("/api/chats", chatRoute);
+
 app.listen(port, (req, res) => {
   console.log("Server running on port: ", port);
 });
