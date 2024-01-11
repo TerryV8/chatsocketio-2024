@@ -1,6 +1,8 @@
 // Define the routes for the app
 
 import { Routes, Route, Navigate } from "react-router-dom";
+import { AuthContext } from "./context/AuthContext";
+import { useContext } from "react";
 
 import Chat from "./pages/Chat";
 import Register from "./pages/Register";
@@ -12,14 +14,15 @@ import { Container } from "react-bootstrap";
 import NavBar from "./components/NavBar";
 
 function App() {
+  const { user } = useContext(AuthContext);
   return (
     <>
       <NavBar />
       <Container className="text-secondary">
         <Routes>
-          <Route path="/" element={<Chat />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={user ? <Chat /> : <Login />} />
+          <Route path="/register" element={user ? <Chat /> : <Register />} />
+          <Route path="/login" element={user ? <Chat /> : <Login />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Container>
