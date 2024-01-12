@@ -22,6 +22,9 @@ app.use("/api/users", userRoute);
 const chatRoute = require("./Routes/chatRoute");
 app.use("/api/chats", chatRoute);
 
+const messageRoute = require("./Routes/messageRoute");
+app.use("/api/messages", messageRoute);
+
 app.listen(port, (req, res) => {
   console.log("Server running on port: ", port);
 });
