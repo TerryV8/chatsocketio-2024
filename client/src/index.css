@@ -4,3 +4,52 @@ body {
   background: rgb(40, 40, 40);
   font-family: "Nunito", sans-serif;
 }
+
+.messages-box {
+  height: 85vvh;
+}
+
+.user-card {
+  color: white;
+  position: relative;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  width: 380px;
+}
+
+.user-card .text-content {
+  width: 170px;
+}
+
+.user-card .name {
+  font-weight: 700;
+}
+
+.user-card .text,
+.user-card .date {
+  font-size: 14px;
+  color: rgb(180, 180, 180);
+}
+
+.user-card .user-online {
+  position: absolute;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: rgb(0, 219, 0);
+  top: -3px;
+  right: -3px;
+  z-index: 2;
+}
+
+.user-card .this-user-notifications {
+  display: flex;
+  background: #00bd9b;
+  height: 20px;
+  width: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}

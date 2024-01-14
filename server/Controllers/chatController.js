@@ -26,6 +26,7 @@ const createChat = async (req, res) => {
   }
 };
 
+// Get all the chats for a given user
 const findUserChats = async (req, res) => {
   const { userId } = req.params;
 
