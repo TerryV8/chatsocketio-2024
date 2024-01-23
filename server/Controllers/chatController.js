@@ -10,8 +10,10 @@ const createChat = async (req, res) => {
       members: { $all: [firstId, secondId] },
     });
 
+    // If the chat already exists, return it
     if (chat) return res.status(200).json(chat);
 
+    // If the chat does not exist, create it
     const newChat = new chatModel({
       members: [firstId, secondId],
     });
